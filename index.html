@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Магазин книг INBOOK</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="img/book.png"/>
+</head>
+    <header>
+        <img src="img/book.png" align="top" style="width: 40px;">
+        <h1>INBOOK</h1>
+
+        <span style="color: green;" id="addmoney">+</span><h2 id="balance"> Баланс: 0 руб.</h2>
+    </header>
+    <body>
+        <main>
+            <div id="controls" style="display:inline-flex;">
+                <p id="sortout" style="margin-left: 25px;cursor:pointer;"><b>Сортировать по цене</b> <img src="img/sort.png" align="top" style="width: 20px;padding-left: 5px;"></p>
+                <select name="" id="category" style="margin-left: 15px;" onChange="searchBooks()">
+                    <option value="0">Без категории</option>
+                </select>
+            </div><br>
+            <input type="search" id="searchtab" placeholder="Введите название книги">
+            <div class="containers">
+            <div id="shelf"></div>
+            <h2 id="nobooks">Нет книг</h2>
+            <div id="shoppingcart">
+                <h1>Корзина <img src="img/cart.png" style="width: 35px; padding-bottom: 20px;" align="middle"></h1>
+                <div id="cart">
+                    <h2 id="noaddbooks">Нет добавленных книг</h2>
+                    <div id="side"></div>
+                </div>
+                <span style="margin-left: 25px" class="finalprice">Итог: <span id="finalprice">0</span> руб.</span>
+                <button class="buybook" id="buynow">Купить сейчас</button>
+            </div>
+        </div>
+        </main>
+    </body>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/getbooks.js"></script>
+    <script src="js/getcategories.js"></script>
+    <script src="js/balance.js"></script>
+    <script src="js/cart.js"></script>
+</html>
